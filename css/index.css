@@ -43,7 +43,12 @@ ul,li{list-style: none}
 ._s{
     background: url(../img/icon1.png) 1px -65px;
 }
-
+.select_top{
+    background: url(../img/icon1.png) 1px -85px;
+}
+.select_bottom{
+    background: url(../img/icon1.png) 1px -105px;
+}
 .listUl{
     margin: 0 50px 0 50px;
     width: 90%;

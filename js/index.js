@@ -31,17 +31,28 @@
     var headerBox=document.getElementsByClassName('head')[0];
     var headerUl=headerBox.getElementsByClassName('head_ul')[0];
     var oLi1=headerUl.getElementsByTagName('li');
+    var S=document.getElementsByTagName('s');
     for(var i=0;i<oLi1.length;i++){
         oLi1[i].myIndex=i;
         oLi1[i].myMethods=-1;
         oLi1[i].onclick=function () {
             this.myMethods*=-1;
-            this.myIndex
             changePosition.call(this);
         }
     }
   function changePosition() {
-      // var _this=this;
+      //==>细节优化   保证每一次点击的排序都是从升序开始
+      for(var k=0;k<S.length;k++){
+          k===this.myIndex?oLi1[k].style.color='red':oLi1[k].style.color='green';
+          k===this.myIndex&&this.myMethods===1?S[k].className='select_top':null;
+          k===this.myIndex&&this.myMethods===-1?S[k].className='select_bottom':null;
+          console.log(this.myMethods);
+          if(k!==this.myIndex){
+              S[k].className="_s";
+              oLi1[k].myMethods=-1;
+              oLi1[k].style.color='green';
+          }
+      }
       var oUl=document.getElementsByClassName('listUl')[0];
       var oLi=oUl.getElementsByTagName('li');
       var ary=Array.prototype.slice.call(oLi);
@@ -61,6 +72,10 @@
           }
           var cur=a.getAttribute(attr);
           var next=b.getAttribute(attr);
+          if(index===2){
+              cur=cur.replace(/-/g,'');
+              next=next.replace(/-/g,'');
+          }
           return (cur-next)*this.myMethods;
       });
       var frg=document.createDocumentFragment();
