@@ -1,0 +1,119 @@
+*{margin: 0;padding: 0}
+ul,li{list-style: none}
+.head{
+    font-family: 'Tahoma',"Microsoft Yahei";
+    margin: 50px 50px 0 50px;
+    width: 88.6%;
+    height: 50px;
+    line-height: 50px;
+    border: 1px solid #dedede;
+}
+.head .head_span{
+    float: left;
+    width: 10%;
+    display: inline-block;
+    font-size: 12px;
+    text-align: right;
+}
+.head .head_ul{
+    width: 90%;
+    display: inline-block;
+    height: 50px;
+    font-size: 12px;
+
+    text-align: center;
+}
+.head .head_ul li{
+    color: #999;
+    width: 30.33333%;
+    display: inline-block;
+}
+.head .head_ul li:hover {
+
+    color:red;
+    cursor: pointer;
+}
+
+
+.head .head_ul li s{
+    width: 15px;
+    height: 15px;
+    display: inline-block;
+}
+._s{
+    background: url(../img/icon1.png) 1px -65px;
+}
+
+.listUl{
+    margin: 0 50px 0 50px;
+    width: 90%;
+}
+.listUl li{
+    margin-top: 20px;
+  width: 20%;
+    float: left;
+    min-width:222px ;
+}
+
+.li_div{
+    text-align: center;
+    float: left;
+    width: 224px;
+    height: 364px;
+    border: 1px solid #dedede;
+    position: relative;
+    display: inline-block;
+}
+.li_div:hover{
+    cursor: pointer;
+    border: 1px solid red;
+}
+.li_div img{
+    margin-top: 38px;
+    width: 180px;
+    height: 180px;
+}
+.li_div span{
+    padding: 15px;
+    display: block;
+    font-size: 12px;
+    color: #666;
+}
+.li_div span:hover{color: red}
+.li_div b{
+    line-height: 30px;
+    display: block;
+    color: #e01d20;
+    font-size: 20px;
+}
+.div_div{
+    font-size: 12px;
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+   position: absolute;
+    bottom: 0;
+    border-top: 1px solid #dedede;
+}
+.div_div .__p{
+    float: left;
+    width: 50%;
+    position: absolute;
+    bottom: 0;
+    border-right: 1px solid #dedede;
+    color: red;
+}
+.div_div .__p:hover{
+    background: red;
+    color: #fff;
+}
+.div_div .__a{
+    text-decoration: none;
+    color: #666;
+    float: left;
+    width: 50%;
+    position: absolute;
+    bottom: 0;
+}
+
+
